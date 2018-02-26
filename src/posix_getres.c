@@ -1,5 +1,6 @@
 #include<unistd.h>
 #include<time.h>
+#include<stdio.h>
 
 int main(){
     struct timespec clock_res;

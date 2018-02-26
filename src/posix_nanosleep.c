@@ -1,7 +1,8 @@
-#include<stdio.h>
-#include<time.h>
+#include <stdio.h>
+#include <time.h>
 #include <sys/time.h>
 #include <sys/resource.h>
+#include <stdlib.h>
 
 // nanosleep to delay process between successive calls to print out time
 // uses timespec structure
@@ -43,8 +44,7 @@ int main(int argc, char** argv) {
         clock_gettime(CLOCK_REALTIME, &curr_time2);
         now1=curr_time1.tv_sec + curr_time1.tv_nsec*0.000000001;
         now2=curr_time2.tv_sec + curr_time2.tv_nsec*0.000000001;
-        printf("Time is %ld : %ld..slept for %lf
-        nsec\n",curr_time2.tv_sec,curr_time2.tv_nsec,(now2-now1)*1000000000);
+        printf("Time is %ld : %ld..slept for %lf nsec\n",curr_time2.tv_sec,curr_time2.tv_nsec,(now2-now1)*1000000000);
     }
 
     printf("Total time taken : actual %lf msec theory(excl. runtime): %d msec\n",(now2-init)*1000,num_iter*atoi(argv[1]));
