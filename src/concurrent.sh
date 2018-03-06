@@ -6,7 +6,7 @@ shift
 shift
 shift
 mkdir -p csvout/${DIRNAME}/${RUNS}runs
-for i in {1,${RUNS}}
+for i in $(seq 1 $RUNS);
 do
-    ./${SCRIPT} "$@" > csvout/${DIRNAME}/${RUNS}runs/run${i}.csv
+    ./${SCRIPT} "$@" > csvout/${DIRNAME}/${RUNS}runs/run${i}.csv &
 done

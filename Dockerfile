@@ -12,3 +12,6 @@ RUN ["gcc", "-lrt", "-o", "timer_mem_use", "timer_mem_use.c"]
 RUN ["gcc", "-lrt", "-o", "timer_memlock", "timer_memlock.c"]
 RUN ["gcc", "-lrt", "-o", "timer_mod_fifo", "timer_mod_FIFO.c"]
 RUN ["gcc", "-lrt", "-o", "timer_usleep", "timer_usleep.c"]
+
+RUN chmod +x nice.sh
+RUN chmod +x concurrent.sh
