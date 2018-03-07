@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
         clock_gettime(CLOCK_REALTIME, &curr_time2);
         now1=curr_time1.tv_sec + curr_time1.tv_nsec*0.000000001;
         now2=curr_time2.tv_sec + curr_time2.tv_nsec*0.000000001;
-        printf("Time is %ld : %ld..slept for %lf nsec\n",curr_time2.tv_sec,curr_time2.tv_nsec,(now2-now1)*1000000000);
+        printf("%lf,%lf\n",curr_time2.tv_sec + curr_time2.tv_nsec * 0.000000001,(now2-now1)*1000000000);
     }
 
     printf("Total time taken : actual %lf msec theory(excl. runtime): %d msec\n",(now2-init)*1000,num_iter*atoi(argv[1]));
