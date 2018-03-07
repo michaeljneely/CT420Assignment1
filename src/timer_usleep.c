@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
         usleep(delay*1000);
         gettimeofday( &tv,&tz);
         stop=tv.tv_sec + tv.tv_usec*0.000001;
-        printf("%ld,%lf\n",tv.tv_sec + tv.tv_usec*0.000001,(stop - start)*1000);
+        printf("%lf,%lf\n",tv.tv_sec + tv.tv_usec*0.000001,(stop - start)*1000);
     }
 
     printf("Total time taken : actual %lf theory(excl. runtime): %d, ms \n",(stop - init)*1000,num_iter*delay);
