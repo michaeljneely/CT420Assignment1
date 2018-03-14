@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
 
         gettimeofday( &tv,&tz);
         stop=tv.tv_sec + tv.tv_usec*0.000001;
-        printf("%lf,%lf\n",tv.tv_sec + tv.tv_usec*0.000001,(stop - start)*1000);
+        printf("%lf,%lf\n",tv.tv_sec + tv.tv_usec*0.000001,(stop - init)*1000);
         // sleep for 10 sec
         sleep(10);
     }
